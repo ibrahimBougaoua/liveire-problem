@@ -19,7 +19,7 @@
                                 </div>
                                 <div class="position-relative flex-grow-1"> <!-- Added flex-grow-1 class to make the input field take up remaining space -->
                                     <input type="text"
-                                        class="form-control"
+                                        class="form-control titre"
                                         id=""
                                         wire:model.debounce.500ms="titre"
                                         wire:keydown.arrow-up="moveSelection('up')"
@@ -215,7 +215,7 @@
 
     document.addEventListener('click', function (event) {
         const clickedElement = event.target;
-        const inputElement = document.querySelector('input[type="text"][wire:model="titre"]');
+        const inputElement = document.querySelector('.titre');
 
         if (inputElement && !inputElement.contains(clickedElement)) {
             Livewire.emit('keydown.escape');
